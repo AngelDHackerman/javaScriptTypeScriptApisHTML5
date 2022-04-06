@@ -6,3 +6,44 @@
 body { 
   background: #eee;
 }
+.flex-container {
+  border: 1px solid black;
+  background: #ccc;
+  padding: 20px;
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: row wrap; /* ? combinacion de flex-direction y flex-wrap */
+  justify-content: space-between; /* * alineado horizontal */
+  align-items: center; /* * alineado vertical */
+  width: 80%;
+  margin: 0 auto; /* * aqui alineamos al centro horizontalmente */
+}
+.caja { 
+  border: 1px solid rgb(70, 69, 69);
+  background-color: white;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  width: 120px;
+  height: 120px;
+  line-height: 120px; /* * con esto centramos verticalmente el texto */
+  text-align: center; /* * con esto centramos horizontalmente el texto */
+  margin: 5px;
+}
+.c1 { 
+  background: lightblue;
+  order: 3; /* ! todos los elementos dentro de un flex puede usar order */
+  /* flex-grow: 5; */ /* ? Esto es la capacidad o el tamaño para crecer dentro del container */
+  flex-basis: 50%; /* ! Este es como un width tambien le da ancho a los items */
+}
+.c2 { 
+  background: lightcoral;
+  order: 2;
+  flex-grow: 2;
+}
+.c3 { 
+  background: lightgreen;
+  order: 1;
+  flex-grow: 1;
+}
