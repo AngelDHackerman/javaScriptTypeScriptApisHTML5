@@ -13,4 +13,4 @@ Para activar el transpilador usamos el comando: (estando dentro de la carpeta de
 
 1. crear archivo _nombreDelModulo.scss
 
-2. En la parte de arriba cargar el modulo asi: `@use '_nombreDelModulo'`
+2. En la parte de arriba del archivo .scss principal, cargar el modulo asi: `@use '_nombreDelModulo'`
