@@ -1,0 +1,28 @@
+@use './anidacion';
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+
+// * Variables 
+
+$color-background: #eee;
+$color-letra: green;
+
+body { 
+  background: $color-background; 
+}
+
+
+
+h1 {
+  color: $color-letra;
+}
+p { 
+  color: $color-letra;
+}
+
+
