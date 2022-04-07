@@ -7,7 +7,7 @@
 }
 
 
-// * Variables 
+      // * Variables 
 
 $color-background: #eee;
 $color-letra: green;
@@ -24,7 +24,7 @@ p {
   color: $color-letra;
 }
 
-// * Mixins, los mixins son como funciones
+      // * Mixins, los mixins son como funciones
 
 @mixin caja_personalizada($fondo: white) {
   background-color: $fondo;
@@ -41,4 +41,8 @@ p {
   margin: 4px;
 }
 
-// * Operadores
+      // * Operadores
+
+.caja, .caja-secundaria { 
+  width: 400px + 100px;
+}

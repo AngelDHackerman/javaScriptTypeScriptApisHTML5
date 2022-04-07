@@ -41,4 +41,8 @@ p {
   margin: 4px;
 }
 
+.caja, .caja-secundaria {
+  width: 500px;
+}
+
 /*# sourceMappingURL=styles.css.map */
