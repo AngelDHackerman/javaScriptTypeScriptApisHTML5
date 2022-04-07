@@ -41,3 +41,17 @@ for (let contador = 1; contador <= 4; contador++) {
 }
 
 console.groupEnd();
+
+
+      // ? Const 
+
+console.group('Const:')
+
+const edad = 18; 
+console.log(edad);
+
+const ciudad = 'Guatemala';
+const fechaNacimiento = 1995;
+console.log(ciudad, fechaNacimiento);
+
+console.groupEnd();
