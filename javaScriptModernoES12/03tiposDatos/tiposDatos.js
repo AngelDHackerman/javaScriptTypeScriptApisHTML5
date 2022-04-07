@@ -66,15 +66,28 @@ let pelicula = {
     `;
   }
 }
-      
-    // Symbol
+pelicula.pais =  'Estados unidos'; // ! asi se agregan propiedades a los objetos Json.
+
+delete pelicula.director; // ! Asi se borran las propiedades en los Json.
+delete pelicula.year; 
+
+for (let propiedades in pelicula) { 
+  console.log(pelicula[propiedades])
+}
 
 
 console.group('json:')
 
   console.log(pelicula.titulo, pelicula.director, pelicula.genero, pelicula.year)
   console.log(pelicula.mostrar());
-  console.log(`pelicula: ${typeof pelicula}, mostrar: ${typeof pelicula.mostrar}`)
+  console.log(`pelicula: ${typeof pelicula}, mostrar: ${typeof pelicula.mostrar} \n`)
+  
 
+  console.group('Pelicula:')
+
+    console.log(pelicula)
+    console.log(`titulo in pelicula: ${'titulo' in pelicula}`)
+
+  console.groupEnd()
 
 console.groupEnd();
