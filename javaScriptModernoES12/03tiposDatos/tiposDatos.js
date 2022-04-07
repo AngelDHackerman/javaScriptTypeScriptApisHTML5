@@ -38,22 +38,43 @@ let vacio = null;
 let noDefinido = undefined;
 
 
-      // JSON - Javascript object Notation - Objetos literales
-
-      // Symbol
-
-
-
 console.group('Array, Null, Undefined:');
 
-    console.log(
-      typeof(paises),
-      typeof(vacio),
-      typeof(noDefinido)
+  console.log(
+    typeof(paises),
+    typeof(vacio),
+    typeof(noDefinido)
     );
-
+  
 console.groupEnd();
 
+  
+    // JSON - Javascript object Notation - Objetos literales
+
+let pelicula = {
+  titulo: 'Space jam',
+  genero: 'Animacion',
+  year: '1996',
+  director: 'Tarantino', 
+  mostrar: function () { // ? Esto de aqui es un Metodo.
+    return `
+      *** La pelicula de la semana *** \n 
+      Titulo: ${this.titulo} \n 
+      Genero: ${this.genero} \n
+      Año: ${this.year} \n 
+      Director: ${this.year} 
+    `;
+  }
+}
+      
+    // Symbol
 
 
+console.group('json:')
 
+  console.log(pelicula.titulo, pelicula.director, pelicula.genero, pelicula.year)
+  console.log(pelicula.mostrar());
+  console.log(`pelicula: ${typeof pelicula}, mostrar: ${typeof pelicula.mostrar}`)
+
+
+console.groupEnd();
