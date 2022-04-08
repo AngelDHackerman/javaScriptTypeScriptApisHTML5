@@ -26,6 +26,15 @@ console.groupEnd();
 
 console.group('Diferencia entre == y === y != y !== :')
 
+ let edad1 = 80;
+ let edad2 = '80';
+
+ if (edad1 === edad2) {
+   console.log('Edades iguales');
+ } else { 
+   console.log('Edades diferentes');
+ }
+
 
 
 
