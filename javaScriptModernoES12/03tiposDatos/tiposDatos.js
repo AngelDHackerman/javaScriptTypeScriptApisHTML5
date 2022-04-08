@@ -91,3 +91,34 @@ console.group('json:')
   console.groupEnd()
 
 console.groupEnd();
+
+
+        // ! Symbol, son datos o identificadores unicos, son datos primitivos.
+
+let animal = Symbol('tigre');
+let animal2 = Symbol('tigre');
+
+let user  = { 
+  id: 1, 
+  nombre: 'Angel',
+  web: 'angeldariaux.com'
+};
+
+let hastaLaVerga = Symbol('id'); // ? Creamos otro 'id' sin que entre en conflicto con el primero.
+user[hastaLaVerga] = 7; // ? Asi agregamos el id creado con el Symbol, Symbol tambien esconde el nombre real de la variable
+
+console.group('Symbol:')
+
+  console.log(`animal == animal2: ${animal == animal2}`);
+  console.log(user);
+  console.log(user.id, user[hastaLaVerga]);
+
+console.groupEnd();
+
+
+
+
+
+
+
+
