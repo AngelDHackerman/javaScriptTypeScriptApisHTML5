@@ -44,5 +44,31 @@ let [nombre1, apellido1 , arte, codigo, DOB, pais1] = usuario1.split(' '); // ? 
 console.log(nombre1, apellido1, arte, pais1)
 
 
+      // * Crear varias variables 
 
+let lenguaje = 'JS',
+      framework = 'Angular',
+      editor = 'VSC';
+
+
+      // * Utilidad parametros funciones
+
+// ? Pasando los parametros en un objeto {} podemos hacer que al invocar la funcion
+// ? podamos decirle que parametros le estamos pasando y cuales no. Siempre al invocar la funcion 
+// ? pasando los parametros como un objeto.
+
+const mostrarUsuario = ({nombre, apellido = 'Desconocido', ciudad = 'Guatemala'}) => { 
+      console.log(nombre, apellido, ciudad);
+}
+
+mostrarUsuario({nombre: 'Carlos', ciudad:'Panama'});
+
+
+// * Aqui podemos OBVIAR por completo un parametro si asi lo queremos
+
+const mostrarUsuario2 = ({nombre = '', apellido = '', ciudad = 'Barcelona'}) => { 
+      console.log(`${nombre} ${apellido} ${ciudad}`);
+}
+
+mostrarUsuario2({apellido: 'Robles', ciudad: 'Valencia'});
 
