@@ -72,3 +72,5 @@ const mostrarUsuario2 = ({nombre = '', apellido = '', ciudad = 'Barcelona'}) => 
 
 mostrarUsuario2({apellido: 'Robles', ciudad: 'Valencia'});
 
+
+
