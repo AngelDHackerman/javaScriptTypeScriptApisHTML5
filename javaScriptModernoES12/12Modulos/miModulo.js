@@ -1,4 +1,4 @@
-const imprimirArray = (datos) => { 
+export const imprimirArray = (datos) => {     // * export const imprimirArray, asi se exportan funciones especificas
   datos.forEach(element => {
     console.log(element)
   });
@@ -6,5 +6,21 @@ const imprimirArray = (datos) => {
   return datos;
 }
 
-export default imprimirArray;   // ? Asi se exportan las funciones de este modulo
+export const saludo = (nombre) => { 
+  console.log(`Hola! Como estas ${nombre}?`);
+
+  return nombre;
+}
+
+      // ? Asi se exportan las funciones de este modulo:
+
+// export default imprimirArray; // * asi se exporta solo 1 funcion.
+
+// export default {    // *Asi se exportan varias funciones (dentro de un objeto).
+//   imprimirArray,
+//   saludo
+// }
+
+
+
 
