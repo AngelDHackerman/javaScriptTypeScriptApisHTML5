@@ -6,13 +6,43 @@ let frutas = ['manzana', 'pera', 'naranja', 'sandia'];
 
       // * clasico
 
-let manzana = frutas[0];
-let pera = frutas[1];
+// let manzana = frutas[0];
+// let pera = frutas[1];
 
-console.log(manzana, pera);
+// console.log(manzana, pera);
 
 
 
       // * Desestructuracion
+
+let [manzana, pera, naranja, sandia] = frutas;
+
+console.log(manzana, pera, naranja);
+
+
+      // * Desestructurar objetos
+
+let persona = { 
+      nombre: 'Angel',
+      edad: 26,
+      altura: 175,
+      peso: 220,
+      pais: 'Guatemala'
+};
+
+let {nombre, edad, altura, pais} = persona;
+
+console.log(nombre, edad, altura, pais); // ? A diferencia de los arrays aqui se pueden OMITIR ciertos valores.
+
+
+      // * Desestructurar Strings
+
+let usuario1 = 'Angel Hernandez WEB 9999gggg 20/11/1995 Guatemala';
+
+let [nombre1, apellido1 , arte, codigo, DOB, pais1] = usuario1.split(' '); // ? Con el split le decimos que el string debe estar separado por los espacios.
+
+console.log(nombre1, apellido1, arte, pais1)
+
+
 
 
