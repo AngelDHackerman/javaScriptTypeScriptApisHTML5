@@ -20,7 +20,8 @@ class Coche {
 
   }
 
-  // Metodos / acciones o las funcionalidades del objeto
+  // Metodos / acciones o las funcionalidades del objeto 
+  // Ver clases y metodos
   
 }
 
