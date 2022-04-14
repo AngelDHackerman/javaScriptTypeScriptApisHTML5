@@ -30,8 +30,13 @@ console.log(arrayDeNumerosCuadrado)
 
       // ? Comprobar si existe un elemento dentro de un array .includes
 
+console.log(personas.includes('victor')); // true, porque victor si existe en el array.
 
 
+      // ? Filtrar arrays - .filter 
 
+let nuevasPersonas = personas.filter(persona => persona.length >= 5);
+console.log(nuevasPersonas); 
 
-
+nuevasPersonas = personas.filter(persona => persona.includes('a'));
+console.log(nuevasPersonas);
