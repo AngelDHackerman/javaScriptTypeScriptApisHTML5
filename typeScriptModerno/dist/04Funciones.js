@@ -28,5 +28,14 @@ const mostrarPais = (pais, continente) => {
 };
 console.log(mostrarPais('Guatemala'));
 console.groupEnd();
+// ? Tipo funcion, esto no es lo mas comun a usar.
+console.group('Tipo funcion:');
+let grupos;
+// .toString(), convierte el objeto o variable en un string.
+grupos = (datos) => {
+    return 'Mis grupos favoritos son: ' + datos.toString();
+};
+console.log(grupos(['GG Allin', 'Ska-p', 'Kiddie Gang']));
+console.groupEnd();
 console.group();
 console.groupEnd();

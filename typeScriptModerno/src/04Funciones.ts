@@ -57,8 +57,21 @@ console.groupEnd();
 
 
 
+      // ? Tipo funcion, esto no es lo mas comun a usar.
 
+console.group('Tipo funcion:');
 
+let grupos: (datos:string[]) => string;
+
+// .toString(), convierte el objeto o variable en un string.
+grupos = (datos:string[]) => { 
+
+  return 'Mis grupos favoritos son: ' + datos.toString();
+}
+
+console.log(grupos(['GG Allin', 'Ska-p', 'Kiddie Gang']));
+
+console.groupEnd();
 
 
 
