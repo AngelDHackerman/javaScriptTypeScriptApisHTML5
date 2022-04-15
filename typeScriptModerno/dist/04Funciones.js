@@ -37,5 +37,13 @@ grupos = (datos) => {
 };
 console.log(grupos(['GG Allin', 'Ska-p', 'Kiddie Gang']));
 console.groupEnd();
+// ? Tipo literal
+// * traje = 'especial' | 1 | 2 | 3 | 4 | 'comprado' esto es un tipo de dato literal, solo puede ser si o si 1, 2, 3, 4.
+console.group('Tipo literal: ');
+const tekken = (personaje, atuendo) => {
+    return `El personaje es ${personaje} y lleva el atuendo ${atuendo}`;
+};
+console.log(tekken('Tigre', 'especial'));
+console.groupEnd();
 console.group();
 console.groupEnd();

@@ -75,6 +75,35 @@ console.groupEnd();
 
 
 
+      // ? Tipo literal
+          // * traje = 'especial' | 1 | 2 | 3 | 4 | 'comprado' esto es un tipo de dato literal, solo puede ser si o si 1, 2, 3, 4.
+
+console.group('Tipo literal: ');
+
+// ! Tipo de dato personalizado o alias: 
+
+type traje = 'especial' | 1 | 2 | 3 | 4 | 'comprado'
+
+
+const tekken = (personaje: string, atuendo: traje): string => { 
+
+  return `El personaje es ${personaje} y lleva el atuendo ${atuendo}`
+}
+
+console.log(tekken('Tigre', 'especial'));
+
+
+
+console.groupEnd();
+
+
+
+
+
+
+
+
+
 
 
 
