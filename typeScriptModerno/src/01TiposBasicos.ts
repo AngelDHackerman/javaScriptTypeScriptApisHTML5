@@ -27,5 +27,22 @@ normal = 17;
 console.log(normal);
 
 
+      // Null y undefined, esto se puede obviar cambiando la configuracion en tsconfig.json
 
+let indefinido:undefined = undefined;
+let nulo:null = null;
+
+console.log(indefinido, nulo);
+
+
+      // Unknown, similar a any PERO! Este no es asignable a otras valibles
+
+let desconocido:unknown = 'Soy un texto desconocido';
+
+desconocido = 1; 
+desconocido = false;
+
+// verdadero = desconocido; // ? Desconocido NO se puede asignar a verdadero, porque verdadero esta declarado como un boolean.
+
+console.log(desconocido);
 
