@@ -16,11 +16,17 @@ const mostrarFecha = () => {
 mostrarFecha();
 console.groupEnd();
 // ? Funciones tipo Never, tipo de dato never significa que es el fin de la aplicacion.
-console.group('Funciones tipo never: ');
 const finApp = () => {
     throw new Error('La applicacion se ha cerrado');
 };
 // finApp();
+// ? Parametros funciones
+// * parametros NO obligatorios se escribe junto con el ?
+console.group('Parametros funciones:');
+const mostrarPais = (pais, continente) => {
+    return `${pais} ${continente}`;
+};
+console.log(mostrarPais('Guatemala'));
 console.groupEnd();
 console.group();
 console.groupEnd();
