@@ -1,11 +1,35 @@
 class Carro { 
 
-  marca: string = 'Renault';
-  modelo: string = 'Clio';
-  year: number = 2000;
-  color: string = 'rojo';
+/*   marca: string;
+  modelo: string;
+  year: number;
+  color: string;
+  encendido: boolean;
+  velocidad: number;
+
+  constructor (marca: string, modelo: string, year: number, color: string) { 
+    this.marca = marca;
+    this.modelo = modelo;
+    this.year = year;
+    this.color = color;
+    this.encendido = false;
+    this.velocidad = 0;
+  } */
+
+  // * con esto de abajo nos ahorramos todo el codigo de arriba:
+
   encendido: boolean = false;
   velocidad: number = 0;
+
+  constructor (
+    public marca: string, 
+    public modelo: string, 
+    public year: number, 
+    public color: string,
+    ) {
+      this.encendido = false;
+      this.velocidad = 0;
+    }
 
   encender ():void {     // :void porque no va a regresar nada, y asi se crean los metodos en TS
     this.encendido = true;
@@ -21,13 +45,12 @@ class Carro {
 
 }
 
-let miCarro:Carro = new Carro();
+let miCarro:Carro = new Carro('Renault', 'Clio', 2000, 'rojo');
 
 miCarro.encender();
+miCarro.acelerar();
+miCarro.acelerar();
 
-miCarro.acelerar();
-miCarro.acelerar();
-miCarro.acelerar();
 
 console.log(miCarro);
 console.log(typeof miCarro);
