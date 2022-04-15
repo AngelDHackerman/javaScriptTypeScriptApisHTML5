@@ -57,6 +57,20 @@ console.groupEnd();
 
 
 
+      // ? Cast o convertir a otro tipo
+
+console.group('Cast o convertir a otro tipo: ');
+
+            // * <number>valorDesconocido; eso es el cast, fuerza el cambio de tipo texto a number
+
+let valorDesconocido:any = '5242';
+let fraseFinal:number = <number>valorDesconocido;
+
+console.log(fraseFinal);
+
+console.groupEnd();
+
+
 
 
 

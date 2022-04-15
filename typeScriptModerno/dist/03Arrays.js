@@ -30,5 +30,12 @@ var datosPersonales;
 // datosPersonales.nombre = 'Carlos';        // * Esto no funciona, NO se pueden cambiar los valores
 console.log(datosPersonales.nombre, datosPersonales.dpi, datosPersonales.direccion, datosPersonales.ciudad);
 console.groupEnd();
+// ? Cast o convertir a otro tipo
+console.group('Cast o convertir a otro tipo: ');
+// * <number>valorDesconocido; eso es el cast, fuerza el cambio de tipo texto a number
+let valorDesconocido = '5242';
+let fraseFinal = valorDesconocido;
+console.log(fraseFinal);
+console.groupEnd();
 console.group();
 console.groupEnd();
