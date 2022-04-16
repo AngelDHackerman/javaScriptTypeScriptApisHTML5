@@ -20,7 +20,11 @@ class Carro {
             this.encendido = false;
             this.velocidad = 0;
           } */
-        // * con esto de abajo nos ahorramos todo el codigo de arriba:
+        // * public: Es accesible desde cualquier parte
+        // * protected: Accesible solo desde dentro de la clase y clases hijas.
+        // * privadas: Solo desde dentro de esta clase
+        // ! aun asi este en public, protected or private, el codigo va a compilar igual manera, esto es mas azucar sintactico.
+        // ? con esto de abajo nos ahorramos todo el codigo de arriba:
         this.encendido = false;
         this.velocidad = 0;
         this.encendido = false;
@@ -35,10 +39,16 @@ class Carro {
     acelerar() {
         this.velocidad += 5;
     }
+    mostrarCarro() {
+        return `${this.marca} ${this.modelo}`;
+    }
+    mostrarCualidades() {
+        return `${this.year} ${this.color}`;
+    }
+    mostrarTodo() {
+        return `${this.mostrarCarro()} ${this.mostrarCualidades()}`;
+    }
 }
 let miCarro = new Carro('Renault', 'Clio', 2000, 'rojo');
-miCarro.encender();
-miCarro.acelerar();
-miCarro.acelerar();
 console.log(miCarro);
-console.log(typeof miCarro);
+console.log(miCarro.mostrarTodo()); // ! aqui si estamos accediendo a las privadas desde un metodo publico
