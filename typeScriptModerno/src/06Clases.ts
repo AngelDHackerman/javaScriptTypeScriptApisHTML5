@@ -26,18 +26,14 @@ class Carro {
 
   // ? con esto de abajo nos ahorramos todo el codigo de arriba:
 
-  encendido: boolean = false;
-  velocidad: number = 0;
-
   constructor (
     public marca: string, 
     public modelo: string, 
     public year: number, 
     public color: string,
-    ) {
-      this.encendido = false;
-      this.velocidad = 0;
-    }
+    protected encendido: boolean = false,
+    protected velocidad: number = 0
+    ) {}
 
   public encender ():void {     // :void porque no va a regresar nada, y asi se crean los metodos en TS
     this.encendido = true;
@@ -86,6 +82,38 @@ class Carro {
 
 }
 
+      // ? Herencia: 
+
+class Camioneta extends Carro { 
+  constructor (
+    public marca: string, 
+    public modelo: string, 
+    public year: number, 
+    public color: string,
+    ) { 
+      super(marca, modelo, year, color);   // ! super nos permite acceder a las propiedades de la clase padre, sino no podriamos usar estas propiedades
+    }
+
+    public arrancar ():void { 
+      this.velocidad = 200;
+      this.encendido = true;
+    }
+
+    public mostrar () { 
+      this.encender();
+
+      return this.encendido;
+    }
+}
+
+let miCamioneta = new Camioneta('Jeep', 'wrangler', 2014, 'verde militar');
+
+
+
+
+
+console.group('Visibilidad, metodos estaticos, getters y setters:')
+
 let miCarro:Carro = new Carro('Renault', 'Clio', 2000, 'rojo');
 
 miCarro.encender();
@@ -98,3 +126,15 @@ console.log(miCarro.mostrarTodo()); // ! aqui si estamos accediendo a las privad
 
 console.log(Carro.saludar());   // ? Invocando al metodo estatico sin instanciar la clase.
 
+console.groupEnd();
+
+
+
+
+console.group('Herencia: ')
+
+console.log(miCamioneta.mostrar());
+miCamioneta.arrancar();
+console.log(miCamioneta);
+
+console.groupEnd();
