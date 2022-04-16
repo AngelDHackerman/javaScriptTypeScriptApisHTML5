@@ -48,7 +48,18 @@ class Carro {
     mostrarTodo() {
         return `${this.mostrarCarro()} ${this.mostrarCualidades()}`;
     }
+    // ? Setters y Getters, son como usar funciones pero con sintaxis mas limpia, azucar sintactico
+    set darColor(color) {
+        this.color = color;
+    }
+    get getColor() {
+        return this.color;
+    }
 }
 let miCarro = new Carro('Renault', 'Clio', 2000, 'rojo');
+miCarro.encender();
+miCarro.acelerar();
+miCarro.darColor = 'Blanco'; // Invocando al setter
+console.log(miCarro.getColor); // Invoicando al getter
 console.log(miCarro);
 console.log(miCarro.mostrarTodo()); // ! aqui si estamos accediendo a las privadas desde un metodo publico
