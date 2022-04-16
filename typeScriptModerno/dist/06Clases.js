@@ -55,6 +55,10 @@ class Carro {
     get getColor() {
         return this.color;
     }
+    // ? Metodos y propiedades estaticos, no hay necesidad de instanciar el objeto!
+    static saludar() {
+        return "hola que tal!";
+    }
 }
 let miCarro = new Carro('Renault', 'Clio', 2000, 'rojo');
 miCarro.encender();
@@ -63,3 +67,4 @@ miCarro.darColor = 'Blanco'; // Invocando al setter
 console.log(miCarro.getColor); // Invoicando al getter
 console.log(miCarro);
 console.log(miCarro.mostrarTodo()); // ! aqui si estamos accediendo a las privadas desde un metodo publico
+console.log(Carro.saludar()); // ? Invocando al metodo estatico sin instanciar la clase.
